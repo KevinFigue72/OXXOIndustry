@@ -1,4 +1,6 @@
 public class Login {
+
+    //edicion 04/12/2022
     private String user;
     private String password;
     /*
