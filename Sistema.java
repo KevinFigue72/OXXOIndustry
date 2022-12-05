@@ -14,6 +14,7 @@ public class Sistema {
      * Constructor.
      */
     static Login[] users = new Login[5];
+
     static Scanner read = new Scanner(System.in);
 
     static Login usuario, Admin = new Login("", "");
@@ -29,11 +30,31 @@ public class Sistema {
             if (users[i] == null) {
                 System.out.println("Registre Nombre De Usuario:    ");
                 String user = read.next();
-                System.out.println("Registre Contraseña De Usuario:");
-                String password = read.next();
-                usuario = new Login(user, password);
-                users[i] = usuario;
+                if (user.length() >= 6) {
+                    System.out.println("Registre Contraseña De Usuario:");
+                    String password = read.next();
+                    if (password.length() >= 8) {
+                        System.out.println("Contraseña De Usuario Muy Grande");
+                    } else {
+                        if (password.length() <= 4) {
+                            System.out.println("Contraseña De Usuario Muy Pequeña");
+                        } else {
+                            usuario = new Login(user, password);
+                            users[i] = usuario;
+                            System.out.println("Usuario Registrado Correctamente: "
+                                    + users[i].getUser() + " " + users[i].getPassword());
+
+                        }
+                    }
+                } else if (user.length() >= 7) {
+                    System.out.println("Nombre De Usuario Muy grande ");
+
+                } else {
+                    System.out.println("Nombre de usuario muy pequeno");
+                }
+
                 break;
+
             }
 
         }
@@ -43,9 +64,14 @@ public class Sistema {
 
     public static void inicioSesion() {
         //Con Este Metodo Simplemente Mostrara Los Usuarios Validados
-        int i = index();
-        System.out.println("Inicio De Sesion Validado");
-        System.out.println("Bienvenido " + users[i].getUser());
+        int i = indice();
+        if (i != -1) {
+            System.out.println("Inicio De Sesion Validado");
+            System.out.println("Bienvenido " + users[i].getUser());
+        } else {
+            System.out.println("Usuario No Encontrado");
+        }
+
 
     }
 
@@ -62,25 +88,42 @@ public class Sistema {
     }
 
     public static int index() {
-       /*
-        *Este Metodo buscara y comparara
-        * Los usuarios ingresados por teclado
-        * con el objeto admin que guarda sus datos
-        * en un arreglo, Si se valida entrara
-        * al metodo Admin.
-        */
+        /*
+         *Este Metodo buscara y comparara
+         * Los usuarios ingresados por teclado
+         * con el objeto admin que guarda sus datos
+         * en un arreglo, Si se valida entrara
+         * al metodo Admin.
+         */
         for (int i = 0; i < users.length; i++) {
             Admin = new Login("admin123", "123");
             users[0] = Admin;
+            System.out.println("Ingrese Usuario: ");
+            String user = read.next();
             if (users[i] != null) {
-                System.out.println("Ingrese Usuario: ");
-                String user = read.next();
-                System.out.println("Ingrese Contraseña: ");
-                String password = read.next();
                 if (users[0].getUser().equals(user)) {
+                    System.out.println("Ingrese Contraseña: ");
+                    String password = read.next();
                     if (users[0].getPassword().equals(password)) {
                         return 0;
+
                     }
+                }
+
+            }
+            break;
+        }
+        return -1;
+    }
+
+    public static int indice() {
+        System.out.println("Ingrese Usuario: ");
+        String user = read.next();
+        for (int i = 0; i < users.length; i++) {
+            if (users[i] != null) {
+                System.out.println(users[i].getUser());
+                if (users[i].getUser().equals(user)) {
+                        return i;
                 }
             }
 
@@ -90,19 +133,16 @@ public class Sistema {
 
     public static void deleteUser() {
         //El Metodo privilegio de el usuario admin eliminara a cualquier usuar por nombre.
-        for (int i = 0; i < users.length; i++) {
-            if (users != null) {
-                System.out.println("Ingrese Nombre De usuario: ");
-                String user = read.next();
-                if (users[i].getUser().equals(user)) {
-                    users[i] = null;
-                } else {
-                    System.out.println("Usuario No Encontrado");
-                    break;
-                }
-            }
 
+        int buscador = indice();
+        if (buscador != -1) {
+            users[buscador] = null;
+            System.out.println("Usuario eliminado correctamente");
+        } else if (buscador == -1){
+            System.out.println("Usuario no encontrado");
         }
+
+
     }
 
     public static void menuAdmin() {
@@ -149,14 +189,18 @@ public class Sistema {
     }
 
     public static void menuGeneral() {
-        // Menu para la interfaz a a
-        System.out.println("          INICIO DE SESION OXXO      ");
-        System.out.println("-------------------------------------");
-        System.out.println("-        1.Ingresar Como Admin      -");
-        System.out.println("-        2.Ingresar Como Empleado   -");
-        System.out.println("-        3.Sali del programa        -");
-        System.out.println("--------------------------------------");
+        System.out.println("----------------------------------");
+        System.out.println("-          Menu Principal        -");
+        System.out.println("-      1.Ingresa Como Admin      -");
+        System.out.println("-      2.Ingresa Como Empleado   -");
+        System.out.println("-      3.Salir Sistema           -");
+        System.out.println("----------------------------------");
+
     }
 
 
 }
+
+
+
+
