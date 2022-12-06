@@ -4,10 +4,10 @@ Descripcion General del Sistema:
 El sistema verifica el inicio de sesión de :
 
 Administrador: 
-Al ingresar como administrador se podra registrar nuevos usuarios o dar de baja a usuarios, podra revisar el inventario.
+Al ingresar como administrador se podra registrar nuevos usuarios o dar de baja a usuarios, también podra revisar el inventario.
 
 Usuario:
-Añ ingresar como usuario podras vender productos.
+Al ingresar como usuario podras vender productos.
 
 
 
