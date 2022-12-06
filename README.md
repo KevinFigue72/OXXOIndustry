@@ -20,11 +20,16 @@ Para ingrsar al modoo usuario el nombre de usuario es "admin123" y la contraseñ
 
 Desarroladores:
 
-Francisco A. Arvayo Luzania  Modulos realizados: Sistema
+Francisco A. Arvayo Luzania  Módulos realizados: Sistema
 
-Grehe A. Martinez Cordero    Modulos realizados: Pruebas
+Grehe A. Martinez Cordero    Módulos realizados: Prueba
 
-C. Kevin Borbon Figueroa     Modulos realizados: Documentacion
+C. Kevin Borbon Figueroa    Módulos realizados: Documentación 
+
+
+Concluciones:
+
+Al trabajar con GitHub no se a tenido probleamas para administar nuestro trabajo, Se nos a facilitado para poder trabajar en conjunto estando en difernetes lugares. 
 
 
 
