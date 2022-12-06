@@ -1,35 +1,48 @@
 # OXXOSystem
-Descripcion General del Sistema:
+Descripción General del Sistema:
 
-El sistema verifica el inicio de sesión de :
 
-Administrador: 
-Al ingresar como administrador se podra registrar nuevos usuarios o dar de baja a usuarios, también podra revisar el inventario.
+El sistema verifica el inicio de sesión de:
 
-Usuario:
-Al ingresar como usuario podras vender productos.
+
+
+Administrador: Al ingresar como administrador se podrá registrar nuevos usuarios o dar de baja 
+a usuarios, también podrá revisar el inventario.
+
+
+
+Usuario: Al ingresar como usuario podrás vender productos.
 
 
 
 Manual:
 
-Para ingrsar al modoo usuario el nombre de usuario es "admin123" y la contraseña "123".
+
+
+Para ingresar al módulo usuario el nombre de usuario es "admin123" y la contraseña "123".
 
 
 
-
-Desarroladores:
-
-Francisco A. Arvayo Luzania  Módulos realizados: Sistema
-
-Grehe A. Martinez Cordero    Módulos realizados: Prueba
-
-C. Kevin Borbon Figueroa    Módulos realizados: Documentación 
+Desarrolladores:
 
 
-Concluciones:
 
-Al trabajar con GitHub no se a tenido probleamas para administar nuestro trabajo, Se nos a facilitado para poder trabajar en conjunto estando en difernetes lugares. 
+Francisco A. Arvayo Lozanía Módulos realizados: Sistema
+
+
+
+Grehe A. Martínez Cordero Módulos realizados: Prueba
+
+
+
+C. Kevin Borbón Figueroa Módulos realizados: Documentación
+
+
+
+Conclusiones:
+
+Al trabajar con GitHub no sea tenido problemas para administrar nuestro trabajo, Se nos ha facilitado
+para poder trabajar en conjunto estando en diferentes lugares.
 
 
 
